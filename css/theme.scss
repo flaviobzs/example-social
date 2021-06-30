@@ -1,0 +1,28 @@
+$primary: #07C8DE;
+$secondary: white;
+$heading-color: #242727;
+$text-color: #808080;
+$gradient: transparent linear-gradient(64deg, #FFD891 0%, #05C8DE 100%) 0% 0% no-repeat padding-box;
+$reverse-gradient: linear-gradient(90deg, rgba(23, 201, 216, 1) 0%, rgba(86, 204, 196, 1) 25%, rgba(141, 209, 180, 1) 75%, rgba(229, 213, 153, 1) 100%);
+$theblue: #00CAE1 !default;
+$danger: red;
+
+$theleftpadding: 18px;
+
+$theleftmargin: 1em;
+$thebottommargin: 0.5em; 
+
+$navheight: 45px;
+
+.border-bottom {    
+    border-bottom: 1px solid rgb(151, 151, 151, 0.1) !important;
+}
+
+.btn:active, .btn:active, .btn:focus, .btn:focus {
+    border-color: transparent !important;
+    outline-color: transparent !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0) !important;
+}
+.tab:active, .tab:active, .tab:focus, .tab:focus  {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0) !important;
+}

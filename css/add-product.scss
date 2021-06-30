@@ -1,0 +1,78 @@
+
+.choosen-image {
+    object-fit: cover;
+}
+.add-image-container {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, calc(90vw + 5vh) 39.5%);
+
+    .chosen-image {
+        border-radius: 2%;
+        height: 90vw;
+        width: 90vw;
+        margin: 2vh 5vw 3vh;
+    }
+    .images-to-choose {
+        overflow-y: scroll;
+        display: grid;
+        border-top: 1px solid #97979716;
+        padding-top: 1vh;
+        grid-template-columns: repeat(3, minmax(0, 28vw));
+        grid-gap: 3vw;
+        justify-content: center;
+
+        .image-to-choose, .input-div {
+            width: 28vw;
+            height: 28vw;
+            text-align: center;
+            border-radius: 10%;
+
+            .gradient {
+                width: 28vw;
+                height: 28vw;
+                border-radius: 10%;
+                display: block;
+
+                .small-chosen-image {
+                    width: 27.5vw;
+                    height: 27.5vw;
+                    margin-top: 0.25vw;
+                    margin-left: -2.8vw;
+                    border-radius: 10%;
+                }
+                @media (max-width: 375px) {
+                  .small-chosen-image {
+                    margin-left: -2.2vw;
+                  }
+                }
+                .chosen-photo-marker {
+                    margin-left: -7vw;
+                    margin-bottom: 9vh;
+                }
+            }
+        }
+        .input-div {
+            border: 1px solid #97979716;
+            padding-top: 9vw;
+            .file-input {
+                display: none;
+            }
+        }
+    }
+}
+// need to delete this and try to ignore bottom menu bar in mobile safari
+@media (max-height: 700px) {
+  .add-image-container {
+    grid-template-rows: calc(90vw + 5vh) 26.5%;
+  }
+}
+@media (max-height: 650px) {
+  .add-image-container {
+    grid-template-rows: calc(90vw + 5vh) 25.4%;
+  }
+}
+@media (max-height: 625px) {
+  .add-image-container {
+    grid-template-rows: calc(90vw + 5vh) 18.2%;
+  }
+}

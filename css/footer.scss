@@ -1,0 +1,77 @@
+.profile-nav {
+    display: grid;
+    grid-template-columns: 6vw 6vw 6vw 6vw 6vw;
+    width: 40vw;
+
+    .nav-button {
+        border: none;
+        background: white;
+        outline: none;
+        height: 56px;
+    } 
+    .nav-button-text {
+        display: none;
+    }
+    .active::after {
+        content: '';
+        position: absolute;
+        bottom: -11px;
+        left: 10px;
+        right: 10px;
+        height: 2px;
+        background: linear-gradient(60deg, #FBBB5D, #FC728A);
+    }
+    .active {
+        position: relative;
+        opacity: 1;
+    }
+}
+@media (max-width: 868px) {
+    .profile-nav {
+        display: grid;
+        position: fixed;
+        height: 56px;
+        background: white;
+        grid-template-columns: repeat(5, 1fr);
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        -webkit-box-shadow: 0px -1px 8px 0px rgba(#000, 0.1); 
+        box-shadow: 0px -1px 8px 0px rgba(#000, 0.1) ;
+    
+        .nav-button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .home-icon {
+                height: 24px;
+                width: 24px;
+            }
+            .search-icon {
+                width: 21;
+                height: 24;
+            }
+            .star-icon {
+                width: 28px;
+                height: 26px;
+            }
+            .notification-icon {
+                height: 24px;
+                width: 22px;  
+            }
+        }
+        .me-button {
+            padding-top: 6px;
+        }
+        .active {
+            display: block;
+            color: #fc6292;
+            font-family: 'SF Pro Medium', sans-serif;
+            font-size: 9px;
+        }
+        .active::after {
+            background: none;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+
+.sign-up-button-container {
+    height: 48px;
+    width: 400px;
+    border-radius: 24px;
+    background-color: transparent;
+    border: 1px solid rgba(#4C4C4C, 0.2); 
+    align-items: center;
+    display: flex;
+}
+.image {
+    position: absolute;
+    margin-left: 27px;
+}
+.label {
+    font-family: 'SF Pro Light';
+    font-size: 13px;
+    color: black;
+    text-align: center;
+    margin: 0 auto;
+}
+@media (max-width: 868px) {
+    .sign-up-button-container {
+        width: 300px;
+    }
+}

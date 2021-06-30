@@ -1,0 +1,428 @@
+button {
+    border: 0;
+    outline: 0;
+    background: 0;
+}
+.profile-container {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+    
+    .user-name {
+        font-size: 20px;
+        font-family: 'SF Pro Light';
+        margin-top: 8vh;
+        margin-left: 0.1vw;
+    }
+    .user-bio {
+        font-family: 'SF Pro Light';
+        font-size: 13px;
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+    .buttonImage {
+        position: relative;
+        border: none;
+        outline: none;
+        background: none;
+        top: 9vh;
+    }
+    .left {
+        left: 67vw;
+    }
+    .right {
+        right: 20vw;
+    }
+    .profile-grid {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .image-div {
+            width: 150px;
+            height: 150px;
+            margin-top: 5vh;
+            margin-right: -5px;
+            grid-column: 2;
+            .profile-image {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+        .user-info {
+            text-align: left;
+            grid-column: 3;
+        }
+    }
+    .file-input {
+        display: none;
+    }
+    .profile-button {
+        min-width: 120px;
+        height: 3vh;
+        border: none;
+        outline: none;
+        background: none;
+        margin: 2vh 0;
+        text-align: left;
+
+        .title {
+            text-transform: uppercase;
+            padding: 0;
+            margin: 0;
+            font-size: 10px;
+            font-family: 'SF Pro Light';
+            margin-left: 10px;
+        }
+        .value {
+            padding: 0;
+            margin: 0;
+            font-family: 'SF Pro Medium';
+            font-size: 17px;
+        }
+    }
+    .profile-posts-control-container {
+        margin-bottom: 66px;
+
+        .switch-container {
+            font-family: 'SF Pro Medium';
+            position: sticky;
+            display: grid;
+            grid-gap: 50px;
+            justify-content: center;
+            grid-template-columns: 42% 42%;
+            box-shadow: 0 7px 5px -5px rgba(0, 0, 0, 0.2);
+            top: 47px;
+            background: white;
+            z-index: 1;
+
+            .switch-image {
+                width: 25px;
+                height: 25px;
+                padding-bottom: 5px;
+                margin-right: 5px;
+            }
+            .switch-button {
+                color: black;
+                border: none;
+                outline: none;
+                background: none;
+                height: 50px;
+                margin-top: 2px;
+                border-bottom: 1px solid #97979716;
+
+                .fav-value {
+                    color: #9d9d9d;
+                    font-weight: 500;
+                }
+                .dot {
+                    background: none;
+                    border: none;
+                    outline: none;
+                    padding: 0;
+                    margin-left: 5px;
+                }
+            }
+            .active::after {
+                content: '';
+                position: absolute;
+                width: auto;
+                bottom: -1px;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background: linear-gradient(90deg, #89D6DE, #32A1F1);
+            }
+            .active {
+                position: relative;
+                color: black;
+                border-bottom: 1px solid #97979716;
+
+                .fav-value {
+                    color: #9d9d9d;
+                    opacity: 1;
+                    font-weight: 500;
+                }
+            }
+        }
+        .wishlist-text {
+          font-size: 12px;
+        }
+        .no-posts-conteiner {
+            margin-top : 5vw;
+            text-align: center;
+
+            .plus {
+                font-size: 17px;
+                font-family: 'Montserrat';
+                margin-bottom: 3vh;
+
+                .plus-image {
+                    padding-bottom: 3px;
+                }
+                .plus-text {
+                    background: linear-gradient(60deg, #FBBB5D, #FC728A);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+
+            .why-title {
+                font-size: 13px;
+            }
+            .why-text {
+                font-size: 11px;
+                line-height: 17px;
+                color: #9D9D9D;
+
+                .why-strong {
+                    font-family: 'SF Pro Medium', sans-serif;
+                }
+
+
+            }
+        }
+    }
+}
+@media (max-width: 1441px) {
+    .profile-container {
+        .profile-grid {
+            grid-template-columns: 28% 12% 60%;
+        }
+    }
+}
+@media (max-width: 868px) {
+    .profile-container {  
+        hr {
+            margin: 25px 14px 10px 5vw;
+        }
+        .profile-header {
+            position: fixed;
+            top: 0;
+            text-align: center;
+            padding-top: 10px;
+            background: white;
+            height: 47px;
+            width: 100vw;
+            border-bottom: 1px solid #97979716;
+            font-family: 'SF Pro Medium';
+            font-size: 17px;
+            z-index: 1000;
+        }
+        .div-with-background {
+            background: url("/new-assets/images/bg.svg") repeat-y;
+            background-position:0% -47px;
+            text-align: center;
+            width: 101vw;
+
+            .profile-buttons-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                width: 100%;
+                padding-bottom: 5px;
+            }
+        }
+        .user-name {
+            font-size: 23px;
+            margin: 0;
+            text-align: center;
+        }
+        .user-bio {
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90vw;
+            white-space: pre-wrap;
+            line-height: 18px;
+            text-align: center;
+            margin-bottom: 15px;
+
+            .more-button {
+                border: 0;
+                outline: 0;
+                background: 0;
+                opacity: 1;
+                color: #9D9D9D;
+            }
+        }
+        .edit-profile-button {
+            height: 32px;
+            width: 118px;
+            border: 1px solid #97979780;
+            font-size: 13px;
+            font-family: 'SF Pro Text Regular', sans-serif;
+            color: #4C4C4C;
+            border-radius: 30px;
+            margin-top: 15px;
+        }
+        .buttonImage {
+            position: absolute;
+            border: none;
+            outline: none;
+            background: none;
+            top: 7px;
+        }
+        .left {
+            left: 5vw;
+        }
+        .right {
+            right: 30px;
+        }
+        .image-div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            padding-top: 47+26px;
+            .profile-image {
+                width: 106px;
+                height: 106px;
+                border-radius: 50%;
+                box-shadow: 0 5px 30px 0 rgba(0,0,0,0.25); 
+            }
+        }
+        .file-input {
+            display: none;
+        }
+        .profile-button {
+            width: calc(100vw / 3);
+            height: 50px;
+            border: none;
+            outline: none;
+            background: none;
+            margin: 0;
+            text-align: center;
+
+            .title {
+                text-transform: uppercase;
+                padding: 0;
+                margin: 0;
+                font-size: 9px;
+            }
+            .value {
+                padding: 0;
+                margin: 0;
+                font-family: 'SF Pro Text Regular';
+                font-size: 17px;
+            }
+        }
+        .profile-posts-control-container {
+            background: white;
+            width: 100vw;
+            // display: flex;
+            // flex-direction: column;
+            // height: 49%;
+            .switch-container {
+                display: grid;
+                grid-template-columns: 32vw 32vw;
+                box-shadow: 0 7px 5px -5px rgba(0, 0, 0, 0.1);
+                font-size: 13px;
+                font-family: 'SF Pro Text Regular', sans-serif;
+
+                .switch-image {
+                    // padding-bottom: 5px;
+                    opacity: 0.3;
+                    width: 20px;
+                }
+                .wishlist {
+                    padding-bottom: 2px;
+                    opacity: 0.3;
+                    width: 14px;
+                }
+                .switch-button {
+                    color: #9d9d9d;
+                    border: none;
+                    outline: none;
+                    background: none;
+                    height: 47px;
+                    padding: 0;
+                    .fav-value {
+                        font-weight: 500;
+                    }
+                }
+                .active::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -1px;
+                    height: 1px;
+                    background: linear-gradient(90deg, #89D6DE, #32A1F1);
+                }
+                .active {
+                    position: relative;
+                    color: black;
+                    .switch-image,
+                    .wishlist {
+                        opacity: 1;
+                    }
+                    .fav-value {
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .wishlist-text {
+              font-family: 'SF Pro Regular', sans-serif;
+              font-size: 13px;
+            }   
+
+            .no-posts-conteiner {
+                margin-top : 26px;
+                text-align: center;
+
+                .plus {
+                    font-size: 17px;
+                    font-family: 'Montserrat';
+                    margin-bottom: 48pb;
+
+                    .plus-image {
+                        padding-top: 2px;
+                    }
+                    .plus-text {
+                        font-family: 'SF Pro Text Regular';
+                        font-size: 14px;
+                        line-height: 18px;
+                        background: linear-gradient(60deg, #FBBB5D, #FC728A);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+
+                .why-title {
+                    font-size: 11px;
+                    font-family: 'SF Pro Light', sans-serif;
+                }
+                .why-text {
+                    font-family: 'SF Pro Light', sans-serif;
+                    line-height: 14px;
+                    opacity: 1;
+                    color: #9D9D9D;
+
+                    .why-strong {
+                        color: #9D9D9D;
+                        font-family: 'SF Pro Medium', sans-serif;
+                        opacity: 1;
+                    }
+                }
+
+            }
+            .post-table-view {
+                width: 30vw;
+                height: 30vw;
+                margin-left: 2vw;
+                padding: 0;
+                background: none;
+                outline: none;
+                border: none;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 9px;
+                    box-shadow: 0 2px 8px 0 rgba(#000000, 0.16);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.edit-profile-container {
+
+    .bottom-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .feedback, .logout {
+            font-size: 15px;
+            padding: 0;
+        }
+        .feedback {
+            font-family: 'SF Pro Text Regular', sans-serif;
+            font-weight: 500;
+        }
+        .logout {
+            font-family: 'SF Pro Light', sans-serif;
+            margin-top: 17px;
+            color: #fc6292;
+        }
+    }
+}   

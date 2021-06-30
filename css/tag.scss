@@ -1,0 +1,12 @@
+.tag-container {
+    grid-row: 1;
+    border: 1px solid #9797972f;
+    border-radius: 20px;
+    font-size: 13px;
+    font-family: 'SF Pro Light';
+
+    strong {
+        font-weight: 500;
+        opacity: 0.3;
+    }
+}

@@ -1,0 +1,103 @@
+.complete-profile-section {
+  overflow-x: hidden;
+
+  .complete-profile-container {
+    padding: 2.5rem 0;
+
+    h4 {
+      font-size: 22px;
+      font-weight: 200;
+      color: #242727;
+      padding-bottom: 0.74rem;
+    }
+
+    p {
+      font-size: 16px;
+      color: $text-color;
+      padding: 0.8rem 0;
+    }
+
+    form {
+      .form-control {
+        padding-top: 0.8rem;
+        padding-bottom: 1.8rem;
+      }
+
+      .phone-input {
+        padding-top: 0.8rem;
+        padding-bottom: 1.4rem;
+      }
+
+      .form-group {
+        margin-bottom: 0.5rem;
+
+        label {
+          font-size: 13px;
+          padding-left: 2.2rem;
+          color: #242727;
+        }
+
+        input {
+          color: #242727;
+          font-size: 13px;
+        }
+
+        span {
+          font-size: 14px;
+        }
+
+        .complete-profile-input-container {
+          ::-webkit-input-placeholder {
+            color: #dadada;
+            opacity: 100%;
+            font-size: 13px;
+          }
+
+          :-moz-placeholder {
+            color: #dadada;
+            opacity: 100%;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+    .complete-profile-avatar {
+      vertical-align: middle;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+
+    .complete-profile-form {
+      input {
+        border: none;
+        border-radius: 0;
+        background: transparent;
+
+        &:focus {
+          box-shadow: none;
+          background: transparent;
+        }
+      }
+    }
+
+    .button-container {
+      padding-top: 3rem;
+
+      .complete-profile-button {
+        opacity: 1;
+        border-radius: 8px;
+        border: none;
+        font-size: 17px;
+        height: 36px;
+        width: 88%;
+        background: $gradient;
+
+        &:hover {
+          background: $reverse-gradient;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.likes-wishlists-shares {
+
+    .back-button, .header-button {
+        border: none;
+        outline: none;
+        background: none;
+    }
+    .back-button {
+        position: absolute;
+        top: 1vh;
+        left: 3vw;
+    }
+    .header-buttons {
+        position: fixed; 
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding-left: 15vw;
+        border-bottom: 1px solid rgba(#000000, 0.3);
+
+        .header-button {
+            width: 15vw;
+            height: 6vh;
+    
+            strong {
+                font-size: 13px;
+                font-weight: 400;
+                opacity: 0.5;
+            }
+            .NAN {
+                color: black;
+            }
+        }
+        .active {
+            border-bottom: 1px solid blue;
+
+            strong {
+                opacity: 1;
+                color: blue;
+            }
+        }
+    }
+}
